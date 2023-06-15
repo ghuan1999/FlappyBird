@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        canvas {
+            margin: 0px;
+            border: 1px solid #d3d3d3;
+            background-color: #162F45;
+        }
+        button{
+            position:absolute;
+            top: 350px;
+            left: 600px;
+            width: 50px;
+            display: none;
+        }
+        p{
+            position:absolute;
+            top: 50px;
+            left: 600px;
+            font-size: 70px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body onload="startGame()" onkeypress="myGameArea.start2(), myGamePiece.hitBottom()">
+  
+    <button id="btn">Chơi lại</button>
+    <p id="ptn">0</p>
+    <img src="./images/348363267_1412276596227079_4458074379618220961_n-removebg-preview.png" alt="bird" id="bird" style="display: none;">
+    <script src="fly.js"></script>
+</body>
+
+</html>
