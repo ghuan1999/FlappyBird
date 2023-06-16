@@ -140,9 +140,9 @@ function updateGameArea2() {
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(200)) {
         x = myGameArea.canvas.width;
-        y = Math.floor(Math.random() * (window.innerHeight - 350)) + 250;
+        y = Math.floor(Math.random() * (window.innerHeight - 400)) + 300;
         myObstacles.push(new component(50, window.innerHeight - y, "#FDB81E", x, y));
-        myObstacles2.push(new component(50, y - 150, "#FDB81E", x, 0));
+        myObstacles2.push(new component(50, y - 200, "#FDB81E", x, 0));
     }
     if (everyinterval(537) && point == 0) {
         point++;
