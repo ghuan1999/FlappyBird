@@ -7,14 +7,14 @@ var conf = 0;
 var w = window.innerWidth;
 var h = window.innerHeight;
 console.log(w, h);
-var link = location.href;
+var link = location.href;   
 console.log(link);
 const button = document.getElementById("btn");
 const ptn = document.getElementById("ptn");
 console.log(button);
 console.log(w / 3);
 function startGame() {
-    myGamePiece = new component2(120, 120, "red", w / 3, h / 3);
+    myGamePiece = new component2(100, 70, "red", w / 3, h / 3);
     myGameArea.start();
 }
 
@@ -32,7 +32,7 @@ var myGameArea = {
             clearInterval(this.interval);
             this.frameNo = 0;
             this.frameNo2 = 1;
-            myGamePiece.gravity = 0.1;
+            myGamePiece.gravity = 0.15;
             this.interval = setInterval(updateGameArea2, 10);
             conf = 1;
         }
@@ -73,7 +73,7 @@ function component2(width, height, color, x, y, type) {
     this.speedY = 0;
     this.gravity = 0;
     this.gravitySpeed = 0;
-    this.bounce = 3;
+    this.bounce = 4;
     this.updateBird = function () {
         ctx = myGameArea.context;
         var bird = document.getElementById("bird");
@@ -140,9 +140,9 @@ function updateGameArea2() {
     myGameArea.frameNo += 1;
     if (myGameArea.frameNo == 1 || everyinterval(200)) {
         x = myGameArea.canvas.width;
-        y = Math.floor(Math.random() * (window.innerHeight - 400)) + 300;
+        y = Math.floor(Math.random() * (window.innerHeight - 350)) + 250;
         myObstacles.push(new component(50, window.innerHeight - y, "#FDB81E", x, y));
-        myObstacles2.push(new component(50, y - 200, "#FDB81E", x, 0));
+        myObstacles2.push(new component(50, y - 150, "#FDB81E", x, 0));
     }
     if (everyinterval(537) && point == 0) {
         point++;
