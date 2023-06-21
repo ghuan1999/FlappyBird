@@ -32,7 +32,7 @@ var myGameArea = {
             clearInterval(this.interval);
             this.frameNo = 0;
             this.frameNo2 = 1;
-            myGamePiece.gravity = 0.15;
+            myGamePiece.gravity = 0.35;
             this.interval = setInterval(updateGameArea2, 10);
             conf = 1;
         }
@@ -73,7 +73,7 @@ function component2(width, height, color, x, y, type) {
     this.speedY = 0;
     this.gravity = 0;
     this.gravitySpeed = 0;
-    this.bounce = 4;
+    this.bounce = 7;
     this.updateBird = function () {
         ctx = myGameArea.context;
         var bird = document.getElementById("bird");
