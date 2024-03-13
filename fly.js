@@ -14,7 +14,7 @@ const ptn = document.getElementById("ptn");
 console.log(button);
 console.log(w / 3);
 function startGame() {
-    myGamePiece = new component2(100, 70, "red", w / 3, h / 3);
+    myGamePiece = new component2(60, 80, "red", w / 3, h / 3);
     myGameArea.start();
 }
 
